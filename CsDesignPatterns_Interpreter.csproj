@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{244E1D8F-BA56-4D95-9C95-7A823AE04A27}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CsDesignPatterns_Iterator</RootNamespace>
-    <AssemblyName>CsDesignPatterns_Iterator</AssemblyName>
+    <RootNamespace>CsDesignPatterns_Interpreter</RootNamespace>
+    <AssemblyName>CsDesignPatterns_Interpreter</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsDesignPatterns_Iterator.Program</StartupObject>
+    <StartupObject>CsDesignPatterns_Interpreter.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
