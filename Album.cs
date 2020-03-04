@@ -3,9 +3,7 @@
  * @license https://mit-license.org/ MIT
  */
 
-using System;
-
-namespace CsDesignPatterns_Iterator
+namespace CsDesignPatterns_Interpreter
 {
     class Album : IAlbum
     {
@@ -14,7 +12,7 @@ namespace CsDesignPatterns_Iterator
 
         public Album(string author, string name)
         {
-            this.name   = name;
+            this.name = name;
             this.author = author;
         }
 

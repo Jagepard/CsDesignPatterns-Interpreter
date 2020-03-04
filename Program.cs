@@ -3,9 +3,7 @@
  * @license https://mit-license.org/ MIT
  */
 
-using System;
-
-namespace CsDesignPatterns_Iterator
+namespace CsDesignPatterns_Interpreter
 {
     class Program
     {

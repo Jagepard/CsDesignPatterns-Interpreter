@@ -3,7 +3,7 @@
  * @license https://mit-license.org/ MIT
  */
 
-namespace CsDesignPatterns_Iterator
+namespace CsDesignPatterns_Interpreter
 {
     interface IAlbum
     {

@@ -6,7 +6,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CsDesignPatterns_Iterator
+namespace CsDesignPatterns_Interpreter
 {
     class Interpreter : IInterpreter
     {
@@ -34,7 +34,8 @@ namespace CsDesignPatterns_Iterator
         {
             string album = "", author = "";
 
-            foreach (string value in exploded) {
+            foreach (string value in exploded)
+            {
                 if (value == "album")
                 {
                     album = item.GetName();
