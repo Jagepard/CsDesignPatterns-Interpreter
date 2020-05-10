@@ -1,1 +1,0 @@
-# CsDesignPatterns-Interpreter

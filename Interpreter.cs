@@ -1,4 +1,4 @@
-﻿/**
+﻿/*
  * @author  : Jagepard <jagepard@yandex.ru>
  * @license https://mit-license.org/ MIT
  */
@@ -8,46 +8,46 @@ using System.Collections.Generic;
 
 namespace CsDesignPatterns_Interpreter
 {
-    class Interpreter : IInterpreter
+    internal class Interpreter : IInterpreter
     {
-        private readonly List<Album> registry = new List<Album>();
+        private readonly List<Album> _registry = new List<Album>();
 
         public void Interpret(string input)
         {
-            string[] exploded = input.Split(' ');
+            var exploded = input.Split(' ');
 
-            foreach (string value in exploded)
+            foreach (var value in exploded)
             {
-                if (Int32.TryParse(value, out int number))
+                if (int.TryParse(value, out var number))
                 {
-                    this.GetDataFromRegistry(exploded, this.registry[number - 1]);
+                    GetDataFromRegistry(exploded, _registry[number - 1]);
                 }
             }
         }
 
         public void AddAlbumToRegistry(Album album)
         {
-            this.registry.Add(album);
+            _registry.Add(album);
         }
 
-        private void GetDataFromRegistry(string[] exploded, Album item)
+        private static void GetDataFromRegistry(IEnumerable<string> exploded, IAlbum item)
         {
             string album = "", author = "";
 
-            foreach (string value in exploded)
+            foreach (var value in exploded)
             {
-                if (value == "album")
+                switch (value)
                 {
-                    album = item.GetName();
-                }
-
-                if (value == "author")
-                {
-                    author = item.GetAuthor();
+                    case "album":
+                        album = item.GetName();
+                        break;
+                    case "author":
+                        author = item.GetAuthor();
+                        break;
                 }
             }
 
-            Console.WriteLine("{0} {1} \n", album, author);
+            Console.WriteLine("{0} {1}", album, author);
         }
     }
 }
