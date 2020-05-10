@@ -1,15 +1,15 @@
-﻿/**
+﻿/*
  * @author  : Jagepard <jagepard@yandex.ru>
  * @license https://mit-license.org/ MIT
  */
 
 namespace CsDesignPatterns_Interpreter
 {
-    class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {
-            Interpreter interpreter = new Interpreter();
+            var interpreter = new Interpreter();
 
             interpreter.AddAlbumToRegistry(new Album("Korn", "Untouchables"));
             interpreter.AddAlbumToRegistry(new Album("Deftones", "Adrenaline"));
